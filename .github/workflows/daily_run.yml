@@ -2,8 +2,8 @@ name: Run Daily Python Script
 
 on:
   schedule:
-    - cron: '35 6 * * *'  # Runs daily at 6:00 AM UTC
-  workflow_dispatch:     # Allows manual run from GitHub UI
+    - cron: '35 6 * * *'  # Runs daily at 6:35 AM UTC (11:35 AM PKT)
+  workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
   run-script:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python 3.12.6
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12.6'  # or your required version
+        python-version: '3.12.6'
 
     - name: Install dependencies
       run: |
@@ -24,4 +24,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Python script
-      run: python currency_exchange.py
+      env:
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      run: python "currency_exchange.py"
