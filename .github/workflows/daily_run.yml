@@ -2,7 +2,7 @@ name: Run Daily Python Script
 
 on:
   schedule:
-    - cron: '35 6 * * *'  # Runs daily at 6:35 AM UTC (11:35 AM PKT)
+    - cron: '40 7 * * *'  # Runs daily at 6:35 AM UTC (11:35 AM PKT)
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
