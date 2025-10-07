@@ -21,6 +21,14 @@ def fetch_exchange_rates(base_currency):
     return response.json()
 
 def main():
+    print("Environment Variables Check:")
+    print(f"DB_HOST={DB_HOST}")
+    print(f"DB_NAME={DB_NAME}")
+    print(f"DB_NAME={DB_USER}")
+    print(f"DB_NAME={DB_PASSWORD}")
+    print(f"DB_NAME={DB_PORT}")
+    print(f"API_KEY={API_KEY[:4]}********")  # Hide most of API key
+
     today = date.today()
 
     try:
