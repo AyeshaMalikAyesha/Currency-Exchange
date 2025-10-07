@@ -4,7 +4,7 @@ from datetime import date
 import os
 
 # API Configuration
-API_KEY = os.getenv("API_KEY") 
+API_KEY = 'ac1fec1cf38330e62088f737'  
 BASE_CURRENCIES = ['USD', 'GBP', 'PKR']
 TARGET_CURRENCIES = ['USD', 'GBP', 'PKR']
 
