@@ -4,16 +4,16 @@ from datetime import date
 import os
 
 # API Configuration
-API_KEY = 'ac1fec1cf38330e62088f737'  
+API_KEY = os.getenv("API_KEY") 
 BASE_CURRENCIES = ['USD', 'GBP', 'PKR']
 TARGET_CURRENCIES = ['USD', 'GBP', 'PKR']
 
 # PostgreSQL connection configuration (from environment variables)
-DB_NAME = "postgres"
-DB_USER = "ayesha"
-DB_PASSWORD = "mypassword"
-DB_HOST = "65.108.37.94"
-DB_PORT = "11818"
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
 
 def fetch_exchange_rates(base_currency):
     url = f'https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{base_currency}'
