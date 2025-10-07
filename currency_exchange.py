@@ -9,11 +9,11 @@ BASE_CURRENCIES = ['USD', 'GBP', 'PKR']
 TARGET_CURRENCIES = ['USD', 'GBP', 'PKR']
 
 # PostgreSQL connection configuration (from environment variables)
-DB_NAME = "aromatransact"
+DB_NAME = "postgres"
 DB_USER = "ayesha"
-DB_PASSWORD = "*postgressAyesha*"
+DB_PASSWORD = "mypassword"
 DB_HOST = "65.108.37.94"
-DB_PORT = "12020"
+DB_PORT = "11818"
 
 def fetch_exchange_rates(base_currency):
     url = f'https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{base_currency}'
