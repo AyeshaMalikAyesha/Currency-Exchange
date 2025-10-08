@@ -12,8 +12,8 @@ TARGET_CURRENCIES = ['USD', 'GBP', 'PKR']
 DB_NAME = os.getenv("DB_NAME") 
 DB_USER = os.getenv("DB_USER") 
 DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
+DB_HOST = 65.108.37.94
+DB_PORT = 12020
 
 def fetch_exchange_rates(base_currency):
     url = f'https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{base_currency}'
