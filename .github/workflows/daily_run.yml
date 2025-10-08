@@ -9,11 +9,6 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
 
-    env:
-      DB_NAME: ${{ secrets.DB_NAME }}
-      DB_USER: ${{ secrets.DB_USER }}
-      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      API_KEY: ${{ secrets.API_KEY }}
 
     steps:
       - name: Checkout repo
