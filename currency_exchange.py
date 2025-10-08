@@ -21,6 +21,8 @@ def fetch_exchange_rates(base_currency):
     return response.json()
 
 def main():
+    print("Connecting to:", DB_NAME, DB_HOST, DB_PORT)
+
     today = date.today()
 
     try:
