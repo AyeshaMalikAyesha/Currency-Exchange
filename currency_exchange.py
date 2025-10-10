@@ -51,7 +51,7 @@ def main():
                     INSERT INTO exchange_rates (base_currency, target_currency, exchange_rate, date)
                     VALUES (%s, %s, %s, %s)
                     ON CONFLICT (base_currency, target_currency, date) DO NOTHING;
-                """, (base_currency, target_currency, rate, today))..
+                """, (base_currency, target_currency, rate, today))
 
     conn.commit()
     print("✅ Exchange rates inserted successfully.")
